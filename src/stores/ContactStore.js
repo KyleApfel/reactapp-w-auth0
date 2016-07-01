@@ -46,16 +46,19 @@ ContactStore.dispatchToken = AppDispatcher.register(action => {
 
     case ContactConstants.RECEIVE_CONTACT:
       setContact(action.contact);
+      console.log(action.contact);
       ContactStore.emitChange();
       break
 
     case ContactConstants.RECEIVE_CONTACT_ERROR:
-      alert(action.message);
+//      alert(action.message);
+      setContact([{name: "Please Login To View"}])
       ContactStore.emitChange();
       break
 
     case ContactConstants.RECEIVE_CONTACTS_ERROR:
-      alert(action.message);
+//      alert(action.message);
+      setContact([{name: "Please Login To View"}])
       ContactStore.emitChange();
       break
 
