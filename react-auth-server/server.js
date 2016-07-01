@@ -8,8 +8,8 @@ const
 app.use(cors());
 
 const authCheck = jwt({
-  secret: new Buffer('OiUUyQyGDdbIY4mmZXfAvJzj20KHhOukFyMjIoBW38IVFgd5XqZ_3s_vvPbldhZN', 'base64'),
-  audience: 'bzJYkJGKtPCeMA3aUTFwj62J46KhzRkT'
+  secret: new Buffer('YOUR_AUTH0_SECRET', 'base64'),
+  audience: 'YOUR_AUTH0_CLIENT_ID'
 });
 
 var contacts = [
